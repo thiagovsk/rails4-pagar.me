@@ -1,6 +1,6 @@
 $(document).ready ->
   # quando o jQuery estiver carregado...
-  PagarMe.encryption_key = 'ek_test_Ec8KhxISQ1tug1b8bCGxC2nXfxqRmk'
+  PagarMe.encryption_key = 'ek_test_ZdV1G1cH2JubFFrcPtIAYYr0A8IM2b'
   form = $('#new_payment')
   form.submit (event) ->
     # quando o form for enviado...
@@ -17,15 +17,19 @@ $(document).ready ->
     #Verifica se há erros
     console.log(creditCard.cardHolderName)
     console.log(creditCard.cardCVV)
+    console.log(creditCard.cardExpirationMonth)
+    console.log(creditCard.cardExpirationYear)
+    console.log(creditCard.cardNumber)
     hasErrors = false
     for field of fieldErrors
       hasErrors = true
       break
     if hasErrors
       # realiza o tratamento de errors
-      console.log("lalalalalal")
+      console.log("heheheheheh")
       alert fieldErrors
     else
+      console.log("lalalalalal")
       # se não há erros, gera o card_hash...
       creditCard.generateHash (cardHash) ->
         # ...coloca-o no form...
@@ -36,8 +40,3 @@ $(document).ready ->
         return
     false
   return
-
-curl -X POST 'https://api.pagar.me/1/transactions' \
-    -d 'api_key=ak_test_Po52jGJ5XIWiutdmkZc7lpccveMUoh' \
-    -d 'amount=1000' \
-    -d 'card_hash={125294_TufE5vPx0VQxasSCpX3KlfnbqElw34c4W2mc0qXVdCizmUD5HCuq3saw4ud8Gx5EQAOLKJl9Xp0e4yJciLD1owUMkZuHG0L/AZyWIVLezbhPxonnGCYOHdE9lentUnSH7WtDUxu4dMRZzDjOC7v2dD5liKdoKfLNECvudYofXzl43yazeTTKGrU5qW0T2pvJ9NFQwfNQexzoHTp+gwJ/1qX+ejgNbUrlvQYW1kbtrRG81orneALj2lovvMmZIDCyRKzkcLvl+ZKWauHPY3IEL7PqIZYUpfAfDvJKAtPOHzU7cY2kYzfJrUHSlLc4MLNGnLRgxAFm4ZZzA2lZMeBW1A==}'
