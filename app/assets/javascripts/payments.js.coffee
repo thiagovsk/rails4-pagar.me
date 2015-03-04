@@ -1,6 +1,8 @@
 $(document).ready ->
   # quando o jQuery estiver carregado...
-  PagarMe.encryption_key = 'ek_test_ZdV1G1cH2JubFFrcPtIAYYr0A8IM2b'
+  # My example :
+  #PagarMe.encryption_key = 'ek_test_ZdV1G1cH2JubFFrcPtIAYYr0A8IM2b'
+  PagarMe.encryption_key = 'your encryption_key'
   form = $('#new_payment')
   form.submit (event) ->
     # quando o form for enviado...

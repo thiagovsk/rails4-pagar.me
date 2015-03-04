@@ -1,6 +1,7 @@
 require 'pagarme'
-PagarMe.api_key = "ak_test_Po52jGJ5XIWiutdmkZc7lpccveMUoh";
-
+# example:
+# PagarMe.api_key = "ak_test_Po52jGJ5XIWiutdmkZc7lpccveMUoh";
+PagarMe.api_key = "your_api_key";
 class Transaction < ActiveRecord::Base
   belongs_to :payment
 
