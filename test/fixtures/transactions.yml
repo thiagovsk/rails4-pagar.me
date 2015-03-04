@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: MyString
+  card_hash: MyString
+  payment_id: 
+
+two:
+  amount: MyString
+  card_hash: MyString
+  payment_id: 
