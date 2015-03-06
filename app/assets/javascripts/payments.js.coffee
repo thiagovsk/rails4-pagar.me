@@ -28,10 +28,8 @@ $(document).ready ->
       break
     if hasErrors
       # realiza o tratamento de errors
-      console.log("heheheheheh")
       alert fieldErrors
     else
-      console.log("lalalalalal")
       # se não há erros, gera o card_hash...
       creditCard.generateHash (cardHash) ->
         # ...coloca-o no form...
